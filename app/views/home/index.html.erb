@@ -3,7 +3,7 @@
   <p>Chat with other users in real time</p>
 
   <div class="panel">
-    <% Chatroom.all.each do |chatroom| %>
+    <% @chatrooms.each do |chatroom| %>
       <div class="panel-block">
         <%= link_to chatroom do %>
           <%= chatroom.topic %>
@@ -14,7 +14,7 @@
   </div>
 
   <% if current_user %>
-    <%= form_for Chatroom.new do |f| %>
+    <%= form_for @chatroom do |f| %>
     <div class="card">
       <div class="card-content">
       <div class="field is-grouped">
